@@ -1,38 +1,223 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+}
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 34px;
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+form {
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="text"]::placeholder {
+  color: #999;
+} 
+
+button[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 10px;
+}
+
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 20px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+h3 {
+  font-size: 18px;
+  color: #333;
+}
+
+p {
+  font-size: 14px;
+  color: #666;
+}
+/* .app.dark {
+  background-color: #222;
+  color: #fff;
+}
+
+.app.dark .heading {
+  color: #fff;
+}
+
+.app.dark input[type="text"],
+.app.dark button[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.app.dark button[type="submit"]:hover {
+  background-color: #555;
+}
+
+.app.dark ul {
+  border-color: #444;
+}
+
+.app.dark ul li {
+  background-color: #333;
+  border-color: #555;
+  color: #fff;
+}
+
+.app.dark ul li h3 {
+  color: #fff;
+} */
+
+/* Additional dark mode styles */
+.app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: background-color 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.app.light {
+  background-color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app.dark {
+  background-color: #080a19;
+}
+
+.heading {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.dark-mode-button {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.dark-mode-button:hover {
+  background-color: #00a078b7;
+}
+
+.search-form {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  padding: 10px;
+  border: 2px solid #333;
+  border-radius: 5px;
+  flex: 1;
+  font-size: 16px;
+}
+
+.search-button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-left: 10px;
+}
+
+.search-button:hover {
+  background-color: #555;
+}
+
+.error {
+  color: #f00;
+  margin-bottom: 20px;
+}
+
+.search-results {
+  text-align: center;
+}
+
+.recipes-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 20px;
+  justify-items: center;
+}
+
+.recipe-item {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.recipe-image {
+  width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.recipe-name {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.recipe-category,
+.recipe-area {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
 }
